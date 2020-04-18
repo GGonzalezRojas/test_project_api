@@ -8,6 +8,9 @@
 #Ignore gcloud keyfile
 test-project-23p-951d2ed368f2.json
 
+#Ignore terraform internal files
+**/.terraform/*
+
 # User-specific files
 *.rsuser
 *.suo
