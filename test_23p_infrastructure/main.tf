@@ -39,7 +39,7 @@ resource "google_container_node_pool" "primary_preemptible_nodes" {
 
   node_config {
     preemptible  = false
-    machine_type = "f1-micro"
+    machine_type = "e2-standard-2"
     oauth_scopes = var.oauth_scopes
   }
 }

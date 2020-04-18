@@ -25,7 +25,7 @@ SECRET_KEY = 'aw10_@#iz088a7#js&k#g-v=t+rck+9h2#vf4_2t8(!isp3c91'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

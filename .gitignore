@@ -17,6 +17,9 @@ test-project-23p-951d2ed368f2.json
 #Ignore terraform tfstate
 test_23p_infrastructure/terraform.tfstate
 
+*.tfstate
+*.tfstate.backup
+
 # User-specific files
 *.rsuser
 *.suo

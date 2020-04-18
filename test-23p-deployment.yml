@@ -4,11 +4,26 @@ metadata:
   name: test-23p-service
   namespace: default
 spec:
+  type: NodePort
+  ports:
+    - port: 8000
+      name: test-23p-django-app
+      protocol: TCP
   selector:
     app: test-23p-app
-  ports:
-  - protocol: TCP
-    port: 8000
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: test-23p-ingress
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              serviceName: test-23p-service
+              servicePort: 8000
+            path: /*
 ---
 apiVersion: apps/v1
 kind: Deployment

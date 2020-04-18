@@ -35,6 +35,12 @@ This section is for annotate useful commands for run the app
     Edit a object => PUT {domain}/api/v1.0/people
     Delete a object => DELETE {domain}/api/v1.0/people
     
-## Containerized de APP
+## Local containerized de APP
     docker build -t ggr/test_23p:latest .
     docker-compose up
+    
+## GCP Basic Pipeline
+This project contains a basic pipeline created with Google Cloud Build
+
+    gcloud projects add-iam-policy-binding test-project-23p --member=serviceAccount:575407038048@cloudbuild.gserviceaccount.com --role=roles/container.developer
+    Updated IAM policy for project [test-project-23p].
