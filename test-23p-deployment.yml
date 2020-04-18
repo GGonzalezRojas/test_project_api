@@ -32,6 +32,11 @@ metadata:
   namespace: default
 spec:
   replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
   selector:
     matchLabels:
       app: test-23p-app
@@ -47,3 +52,21 @@ spec:
         - containerPort: 8000
         command: ["/bin/sh"]
         args: ["-c", "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+        livenessProbe:
+          httpGet:
+            scheme: HTTP
+            path: /admin
+            port: 8000
+          initialDelaySeconds: 20
+          periodSeconds: 30
+          timeoutSeconds: 10
+          failureThreshold: 2
+        readinessProbe:
+          httpGet:
+            scheme: HTTP
+            path: /admin/login/?next=/admin/
+            port: 8000
+          initialDelaySeconds: 20
+          periodSeconds: 30
+          successThreshold: 1
+          failureThreshold: 2
