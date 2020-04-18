@@ -11,6 +11,9 @@ test-project-23p-951d2ed368f2.json
 #Ignore terraform internal files
 **/.terraform/*
 
+#Igore env folder
+**/env_23p/*
+
 # User-specific files
 *.rsuser
 *.suo
