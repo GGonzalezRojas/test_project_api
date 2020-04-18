@@ -34,3 +34,7 @@ This section is for annotate useful commands for run the app
     Create new object => POST {domain}/api/v1.0/people
     Edit a object => PUT {domain}/api/v1.0/people
     Delete a object => DELETE {domain}/api/v1.0/people
+    
+## Containerized de APP
+    docker build -t ggr/test_23p:latest .
+    docker-compose up
