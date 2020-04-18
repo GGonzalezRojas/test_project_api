@@ -5,6 +5,8 @@
 
 #Ignore .idea folder
 .idea/
+#Ignore gcloud keyfile
+test-project-23p-951d2ed368f2.json
 
 # User-specific files
 *.rsuser
