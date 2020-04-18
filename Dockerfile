@@ -9,11 +9,11 @@ ENV PYTHONUNBUFFERED 1
 # create root directory for our project in the container
 RUN mkdir /test_23p
 
-# Set the working directory to /music_service
+# Set the working directory to /test_23p
 WORKDIR /test_23p
 
-# Copy the current directory contents into the container at /music_service
-ADD . /test_23p/
+# Copy the current directory contents into the container at /test_23p
+ADD test_23p /test_23p/
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt

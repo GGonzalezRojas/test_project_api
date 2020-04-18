@@ -14,6 +14,9 @@ test-project-23p-951d2ed368f2.json
 #Igore env folder
 **/env_23p/*
 
+#Ignore terraform tfstate
+test_23p_infrastructure/terraform.tfstate
+
 # User-specific files
 *.rsuser
 *.suo

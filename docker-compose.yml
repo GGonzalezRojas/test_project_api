@@ -1,11 +1,9 @@
-version: '3'
+version: '3.3'
 
 services:
   test_23p_app:
     build: .
     command: sh -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     container_name: test_23p
-    volumes:
-      - .:/test_23p
     ports:
       - "8000:8000"
