@@ -9,7 +9,7 @@ steps:
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
-  - --filename='test-23p-deployment.yml'
+  - --filename=test-23p-deployment.yml
   - --image=gcr.io/test-project-23p/test-23p-app:$SHORT_SHA
-  - --location='us-central1-a'
-  - --cluster='test-23p-cluster'
+  - --location=us-central1-a
+  - --cluster=test-23p-cluster
