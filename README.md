@@ -42,5 +42,11 @@ This section is for annotate useful commands for run the app
 ## GCP Basic Pipeline
 This project contains a basic pipeline created with Google Cloud Build
 
-    gcloud projects add-iam-policy-binding test-project-23p --member=serviceAccount:575407038048@cloudbuild.gserviceaccount.com --role=roles/container.developer
-    Updated IAM policy for project [test-project-23p].
+## Apigee documentation
+All request need to be sended by a valid Authorization Token, to generates, you need a valid user credentials.
+ 
+    POST https://guxtavitox-eval-prod.apigee.net/generate_token/+JSON => Generate a valid Token
+    GET https://guxtavitox-eval-prod.apigee.net/people/ => Obtain all people list
+    GET https://guxtavitox-eval-prod.apigee.net/people/:id  => Obtain de Person with this id  
+    PUT https://guxtavitox-eval-prod.apigee.net/people/:id + JSON => Update a Person with this id
+    DELETE https://guxtavitox-eval-prod.apigee.net/people/:id => Delete a PErson with this id
