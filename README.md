@@ -1,5 +1,5 @@
 # test_project_api
-Testing project for 23people
+Testing project for Django REST Framework
 This project is develop in Django 3.0.5 and Django REST framework plugin.
 
 ## Basic commands
